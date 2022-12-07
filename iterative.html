@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Iterative Design</title>
+    <link rel="icon" href="assets/pengicon.png">
+    <link rel="stylesheet" href="styles3.css" />
+    <meta name="description" content="UI/UX Assignment 4 - Write-Up" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-title">Playful Penguin</div>
+			<a href="#" class="dropdown">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href='main.html';">About</a></li>
+		      <li><a href="main.html#proj">Projects</a></li>
+		    </ul>
+      </div>  
+    </nav>
+
+    <div id="title" align="center">
+      <h1>Iterative Design</h1>
+    </div>
+
+    <h2>Description</h2>
+    <p>
+      Working in a group of 4 students, our task was to design an interactive interface 
+      for an emerging startup. We chose to design the interface for
+      <a href="https://www.ycombinator.com/companies/needl">Needl,</a> a Y
+      Combinator startup whose goal is to create an intelligent search bar for
+      all of a user's apps.
+    </p>
+
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#sketches">Sketching and Wireframing</a></li>
+      <li><a href="#mockups">Mockups and Critiques</a></li>
+      <li><a href="#testing">User Testing</a></li>
+    </ol>
+
+    <div id="sketches">
+      <h2>Part 1: Sketching and Wireframing</h2>
+
+      <h3>Pre-Design Thinking</h3>
+      <p>
+        We decided to design Needl for a desktop interface, since that's where
+        lots of a user's documents should reside. We think corporate workers
+        with lots of documents and projects would benefit from Needl, as it
+        helps them manage the different tasks at hand. In addition, students
+        would also benefit from Needl, because it helps them keep track of
+        documents they need for classes and club activities. In general, the
+        more documents and work a person is involved with, the more they would
+        benefit from Needl, because it provides a streamlined way to find
+        relevant documents, which can be a fairly hard task.
+      </p>
+
+      <h3>Sketches</h3>
+      <p>
+        With this in mind, we created 4 different possible designs for Needl’s
+        desktop interface.
+      </p>
+      <h4>Design A</h4>
+      <div class="sketch-row">
+        <img src="assets/sketch-a-3.png" />
+        <img src="assets/sketch-a-2.png" />
+        <img src="assets/sketch-a-1.png" />
+      </div>
+      <h4>Design B</h4>
+      <div class="sketch-row">
+        <img src="assets/sketch-b-1.jpg" />
+        <img src="assets/sketch-b-2.jpg" />
+        <img src="assets/sketch-b-3.jpg" />
+      </div>
+      <h4>Design C</h4>
+      <div class="sketch-row">
+        <img src="assets/sketch-c-1.jpg" />
+        <img src="assets/sketch-c-2.jpg" />
+        <img src="assets/sketch-c-3.jpg" />
+      </div>
+      <h4>Design D</h4>
+      <div class="sketch-row">
+        <img src="assets/sketch-d-1.jpg" />
+        <img src="assets/sketch-d-2.jpg" />
+        <img src="assets/sketch-d-3.jpg" />
+      </div>
+
+      <h3>Combining Ideas into a Wireframe</h3>
+      <p>
+        Afterwards, we combined the ideas from these sketches into a wireframe.
+      </p>
+      <img src="assets/wireframes-1.jpg" />
+      <img src="assets/wireframes-2.jpg" />
+      <img src="assets/wireframes-3.jpg" />
+      <img src="assets/wireframes-4.jpg" />
+      <img src="assets/wireframes-5.jpg" />
+      <img src="assets/wireframes-6.jpg" />
+    </div>
+
+    <div id="mockups">
+      <h2>Part 2: Mockups</h2>
+      <h3>Mockup Crit in Studio</h3>
+      <p>
+        Using our wireframe as a baseline, we created an interactive high
+        fidelity mockup of Needl’s desktop interface. Then, we received the
+        following comments in our mockup critique session:
+      </p>
+      <ul>
+        <li>
+          It is difficult to return to the home page, once users navigate away
+        </li>
+        <li>The purpose of the application is unclear to new users</li>
+        <li>
+          We should choose a different font to make L in Needl more obvious
+        </li>
+        <li>
+          We should clarify what the color scheme for folders is, when users
+          browse files
+        </li>
+        <li>It is unclear how to logout from our interface</li>
+        <li>
+          The three bars at the top right should expand into a sidebar, since
+          they appear clickable
+        </li>
+        <li>The navbar's back button is not useful, since there isn't much depth in the interface </li>
+        <li>The logo should link to the home page</li>
+        <li>There are redundant ways to exit from the “authorize” page</li>
+        <li>
+          The x’s at the corner of app icons is unintuitive, and a stressful way
+          to manage connections
+        </li>
+      </ul>
+
+      <h3>Interactive High Fidelity Mockup</h3>
+      <div class="center">
+        <iframe
+          src="https://drive.google.com/file/d/1_uM1tO0wPcxkdd5RZzB6erYCZ8EwDfLk/preview"
+          width="640"
+          height="480"
+          allow="autoplay"
+        ></iframe>
+      </div>
+    </div>
+
+    <div id="testing">
+      <h2>Part 3: User Testing</h2>
+      <h3>Determine a Task</h3>
+      <p>
+        There is no single task that would explore an expansive scope of what
+        Needl is capable of. Because of this, we decided to give our users a set
+        of tasks that allowed them to reach every main page of Needl we
+        implemented. These included:
+      </p>
+      <ul>
+        <li>Viewing and opening files within the folders page</li>
+        <li>Getting all search results</li>
+        <li>Adding and removing apps connected to Needl</li>
+      </ul>
+      <h3>Testing Instructions</h3>
+      <p>
+        <b>Scenario:</b> This is a prototype of a desktop application that
+        allows users to search for any document, message or file across any
+        compatible account a user chooses to link with Needl, such as Gmail,
+        Google Drive and Slack. You will be given a set of tasks to complete
+        with the assumption that you have already created an account with Needl
+        and therefore have multiple apps connected to Needl along with several
+        files you can search for. NOTE: This is only an interactive mockup made
+        in Figma. You can scroll and click throughout your tasks but you will
+        not be able to interact with every button or search bar as certain
+        functionalities have not been fully implemented.
+      </p>
+      <p>
+        <b>Task 1:</b> Sign in, navigate your way towards the “All Folders” page
+        and select the “Receipts” folder. You should see a table of 4 files
+        inside the “Receipts” page. Once you have reached this page, return to
+        the “Home” page.
+      </p>
+      <p>
+        <b>Task 2:</b> Now imagine you want to make a search for the keyword
+        “Cookout” and view all results. Assuming typing was functional, attempt
+        to make this search in the Home page. Once your search results are
+        displayed, click on one or more files to try and open them outside of
+        Needl. Note that other apps cannot actually be opened in this prototype,
+        so select “Cancel” for any display messages you receive.
+      </p>
+      <p>
+        <b>Task 3:</b> Return to the Home page once more. Now, imagine you want
+        to connect a new application, Slack, to your Needl account. From the
+        Home page, navigate to the Manage Connections page and successfully
+        connect Slack to Needl. If you are successful, the Slack icon will
+        appear in the grid of Current Connections.
+      </p>
+      <p>
+        <b>Task 4:</b> Remain on the Manage Connections page. Now you will
+        attempt to disconnect an application from Needl from the set of nine
+        applications that are currently connected. This can only be done within
+        the Manage Connections page you are currently on. Note that the removal
+        feature has not been fully implemented, so as before, select “Cancel”
+        for any display messages you receive. Feel free to stop once you receive
+        a display for any three of the applications.
+      </p>
+
+      <h3>Follow-Up Questions</h3>
+      <p>
+        What parts of navigating through the prototype were most confusing for
+        you? How could they be improved?
+      </p>
+      <p>
+        How do you feel about the overall design of the application (color
+        scheme, layout, buttons, etc.)?
+      </p>
+      <p>
+        Is there anything else you wish had been made clearer or more user
+        friendly?
+      </p>
+
+      <h3>Testing Videos from UserTesting.com</h3>
+      <p><b>User 1</b></p>
+      <div class="center">
+        <video width="640" height="400" controls>
+          <source src="assets/user-1.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <p><b>User 2</b></p>
+      <div class="center">
+        <video width="640" height="400" controls>
+          <source src="assets/user-2.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <p><b>User 3</b></p>
+      <div class="center">
+        <video width="640" height="400" controls>
+          <source src="assets/user-3.mp4" type="video/mp4" />
+        </video>        
+      </div>
+      
+      <h3>Analysis of Results</h3>
+      <p>
+        The subtasks are explained in the Testing Instructions section above.
+        For the most part, all users were able to follow through with each task
+        to completion (one user could not complete the final task due to unclear
+        instruction and incomplete implementation). The following are the main
+        issues users encountered and what changes could be made to address them:
+      </p>
+      <ul>
+        <li>
+          Not being able to identify an app due to a small font size (<strong
+            >User 1</strong
+          >). To address this, we can reconsider the size and distribution of
+          images and text to make reading/viewing more accessible for users.
+        </li>
+        <li>
+          Having trouble identifying where and how apps can be added or removed
+          from Needl (<strong>Users 2 and 3</strong>). Our prototype uses a
+          large add symbol and a small pencil symbol for each feature,
+          respectively. However, we can include an additional text description
+          or improved icons to clearly indicate to the user what to click on.
+        </li>
+        <li>
+          For viewing files, <strong>User 2</strong>
+          suggested making a layout similar to an inbox. This is somewhat
+          already done in the “All Results” page, however it is not the first
+          thing users see. Users may benefit from having this be the Home page
+          instead.
+        </li>
+        <li>
+          There was some confusion in navigating to a folder due to unaccessible
+          links in the “Recent Searches” table (<strong>User 3</strong>). This
+          brings up the question on what should be accessed in this table
+          (<strong>user files and Needl folders</strong> vs
+          <strong>user files only</strong>).
+        </li>
+        <li>
+          To remove an app, or access an app’s settings in general, it may be
+          helpful to have a menu open for each app rather than limit a user to
+          click on add or remove only (<strong>User 3</strong>).
+        </li>
+      </ul>
+    </div>
+
+    <h3 style="margin-left: 0px"><a href="#title">Back to Top</a></h3>
+  </body>
+</html>
