@@ -4,21 +4,24 @@
     <title>Iterative Design</title>
     <link rel="icon" href="assets/pengicon.png">
     <link rel="stylesheet" href="styles3.css" />
+    <script src="script.js" defer></script>
     <meta name="description" content="UI/UX Assignment 4 - Write-Up" />
   </head>
 
   <body>
     <nav class="navbar">
-      <div class="navbar-title">Playful Penguin</div>
-			<a href="#" class="dropdown">
+      <a href="index.html">
+        <div class="navbar-title">Playful Penguin</div>
+      </a>			
+      <a href="#" class="dropdown">
 				<span class="bar"></span>
 				<span class="bar"></span>
 				<span class="bar"></span>
 			</a>
       <div class="navbar-links">
         <ul>
-          <li><a href='main.html';">About</a></li>
-		      <li><a href="main.html#proj">Projects</a></li>
+          <li><a href='index.html'>About Me</a></li>
+		      <li><a href="index.html#proj">Projects</a></li>
 		    </ul>
       </div>  
     </nav>
@@ -31,7 +34,7 @@
     <p>
       Working in a group of 4 students, our task was to design an interactive interface 
       for an emerging startup. We chose to design the interface for
-      <a href="https://www.ycombinator.com/companies/needl">Needl,</a> a Y
+      <a href="https://www.ycombinator.com/companies/needl">Needl</a>, a Y
       Combinator startup whose goal is to create an intelligent search bar for
       all of a user's apps.
     </p>
@@ -64,41 +67,174 @@
         With this in mind, we created 4 different possible designs for Needl’s
         desktop interface.
       </p>
+
       <h4>Design A</h4>
-      <div class="sketch-row">
+      <div class="slide-container">
+        <div class="slider">
+          <div class="slider__slides">
+            <div class="slider__slide active">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Shakuzoji_Kuginuki_Jizo-3586.jpg/800px-Shakuzoji_Kuginuki_Jizo-3586.jpg" alt="A rooftop in Japan" />
+            </div>
+            <div class="slider__slide">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Stirling_Castle_Main_Gate.jpg/800px-Stirling_Castle_Main_Gate.jpg" alt="A castle in Scotland" />
+            </div>
+            <div class="slider__slide">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Xiaoqingshan_Farm_Product_Market%2C_Puding_County%2C_Guizhou%2C_China2.jpg/800px-Xiaoqingshan_Farm_Product_Market%2C_Puding_County%2C_Guizhou%2C_China2.jpg" alt="A street market in China" />
+            </div>
+            <div class="slider__slide">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Patung_Buddha_Tidur_Trowulan.jpg/800px-Patung_Buddha_Tidur_Trowulan.jpg" alt="A statue of the Buddha in Thailand" />
+            </div>
+          </div>
+          <div id="nav-button--prev" class="slider__nav-button"></div>
+          <div id="nav-button--next" class="slider__nav-button"></div>
+          <div class="slider__nav">
+            <div class="slider__navlink active"></div>
+            <div class="slider__navlink"></div>
+            <div class="slider__navlink"></div>
+            <div class="slider__navlink"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="sketch-row">
         <img src="assets/sketch-a-3.png" />
         <img src="assets/sketch-a-2.png" />
         <img src="assets/sketch-a-1.png" />
-      </div>
+      </div> -->
       <h4>Design B</h4>
-      <div class="sketch-row">
+      <div class="slide-container">
+        <div class="slider">
+          <div class="slider__slides">
+            <div class="slider__slide active">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Shakuzoji_Kuginuki_Jizo-3586.jpg/800px-Shakuzoji_Kuginuki_Jizo-3586.jpg" alt="A rooftop in Japan" />
+            </div>
+            <div class="slider__slide">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Stirling_Castle_Main_Gate.jpg/800px-Stirling_Castle_Main_Gate.jpg" alt="A castle in Scotland" />
+            </div>
+            <div class="slider__slide">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Xiaoqingshan_Farm_Product_Market%2C_Puding_County%2C_Guizhou%2C_China2.jpg/800px-Xiaoqingshan_Farm_Product_Market%2C_Puding_County%2C_Guizhou%2C_China2.jpg" alt="A street market in China" />
+            </div>
+            <div class="slider__slide">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Patung_Buddha_Tidur_Trowulan.jpg/800px-Patung_Buddha_Tidur_Trowulan.jpg" alt="A statue of the Buddha in Thailand" />
+            </div>
+          </div>
+          <div id="nav-button--prev" class="slider__nav-button"></div>
+          <div id="nav-button--next" class="slider__nav-button"></div>
+          <div class="slider__nav">
+            <div class="slider__navlink active"></div>
+            <div class="slider__navlink"></div>
+            <div class="slider__navlink"></div>
+            <div class="slider__navlink"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="sketch-row">
         <img src="assets/sketch-b-1.jpg" />
         <img src="assets/sketch-b-2.jpg" />
         <img src="assets/sketch-b-3.jpg" />
-      </div>
+      </div> -->
       <h4>Design C</h4>
-      <div class="sketch-row">
+      <div class="slide-container">
+        <div class="slider">
+          <div class="slider__slides">
+            <div class="slider__slide active">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Shakuzoji_Kuginuki_Jizo-3586.jpg/800px-Shakuzoji_Kuginuki_Jizo-3586.jpg" alt="A rooftop in Japan" />
+            </div>
+            <div class="slider__slide">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Stirling_Castle_Main_Gate.jpg/800px-Stirling_Castle_Main_Gate.jpg" alt="A castle in Scotland" />
+            </div>
+            <div class="slider__slide">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Xiaoqingshan_Farm_Product_Market%2C_Puding_County%2C_Guizhou%2C_China2.jpg/800px-Xiaoqingshan_Farm_Product_Market%2C_Puding_County%2C_Guizhou%2C_China2.jpg" alt="A street market in China" />
+            </div>
+            <div class="slider__slide">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Patung_Buddha_Tidur_Trowulan.jpg/800px-Patung_Buddha_Tidur_Trowulan.jpg" alt="A statue of the Buddha in Thailand" />
+            </div>
+          </div>
+          <div id="nav-button--prev" class="slider__nav-button"></div>
+          <div id="nav-button--next" class="slider__nav-button"></div>
+          <div class="slider__nav">
+            <div class="slider__navlink active"></div>
+            <div class="slider__navlink"></div>
+            <div class="slider__navlink"></div>
+            <div class="slider__navlink"></div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="sketch-row">
         <img src="assets/sketch-c-1.jpg" />
         <img src="assets/sketch-c-2.jpg" />
         <img src="assets/sketch-c-3.jpg" />
-      </div>
+      </div> -->
       <h4>Design D</h4>
-      <div class="sketch-row">
+      <div class="slide-container">
+        <div class="slider">
+          <div class="slider__slides">
+            <div class="slider__slide active">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Shakuzoji_Kuginuki_Jizo-3586.jpg/800px-Shakuzoji_Kuginuki_Jizo-3586.jpg" alt="A rooftop in Japan" />
+            </div>
+            <div class="slider__slide">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Stirling_Castle_Main_Gate.jpg/800px-Stirling_Castle_Main_Gate.jpg" alt="A castle in Scotland" />
+            </div>
+            <div class="slider__slide">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Xiaoqingshan_Farm_Product_Market%2C_Puding_County%2C_Guizhou%2C_China2.jpg/800px-Xiaoqingshan_Farm_Product_Market%2C_Puding_County%2C_Guizhou%2C_China2.jpg" alt="A street market in China" />
+            </div>
+            <div class="slider__slide">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Patung_Buddha_Tidur_Trowulan.jpg/800px-Patung_Buddha_Tidur_Trowulan.jpg" alt="A statue of the Buddha in Thailand" />
+            </div>
+          </div>
+          <div id="nav-button--prev" class="slider__nav-button"></div>
+          <div id="nav-button--next" class="slider__nav-button"></div>
+          <div class="slider__nav">
+            <div class="slider__navlink active"></div>
+            <div class="slider__navlink"></div>
+            <div class="slider__navlink"></div>
+            <div class="slider__navlink"></div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="sketch-row">
         <img src="assets/sketch-d-1.jpg" />
         <img src="assets/sketch-d-2.jpg" />
         <img src="assets/sketch-d-3.jpg" />
-      </div>
+      </div> -->
 
       <h3>Combining Ideas into a Wireframe</h3>
       <p>
         Afterwards, we combined the ideas from these sketches into a wireframe.
       </p>
-      <img src="assets/wireframes-1.jpg" />
+      <div class="slide-container">
+        <div class="slider">
+          <div class="slider__slides">
+            <div class="slider__slide active">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Shakuzoji_Kuginuki_Jizo-3586.jpg/800px-Shakuzoji_Kuginuki_Jizo-3586.jpg" alt="A rooftop in Japan" />
+            </div>
+            <div class="slider__slide">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Stirling_Castle_Main_Gate.jpg/800px-Stirling_Castle_Main_Gate.jpg" alt="A castle in Scotland" />
+            </div>
+            <div class="slider__slide">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Xiaoqingshan_Farm_Product_Market%2C_Puding_County%2C_Guizhou%2C_China2.jpg/800px-Xiaoqingshan_Farm_Product_Market%2C_Puding_County%2C_Guizhou%2C_China2.jpg" alt="A street market in China" />
+            </div>
+            <div class="slider__slide">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Patung_Buddha_Tidur_Trowulan.jpg/800px-Patung_Buddha_Tidur_Trowulan.jpg" alt="A statue of the Buddha in Thailand" />
+            </div>
+          </div>
+          <div id="nav-button--prev" class="slider__nav-button"></div>
+          <div id="nav-button--next" class="slider__nav-button"></div>
+          <div class="slider__nav">
+            <div class="slider__navlink active"></div>
+            <div class="slider__navlink"></div>
+            <div class="slider__navlink"></div>
+            <div class="slider__navlink"></div>
+          </div>
+        </div>
+      </div>
+      <!-- <img src="assets/wireframes-1.jpg" />
       <img src="assets/wireframes-2.jpg" />
       <img src="assets/wireframes-3.jpg" />
       <img src="assets/wireframes-4.jpg" />
       <img src="assets/wireframes-5.jpg" />
-      <img src="assets/wireframes-6.jpg" />
+      <img src="assets/wireframes-6.jpg" /> -->
     </div>
 
     <div id="mockups">
@@ -221,21 +357,21 @@
       <h3>Testing Videos from UserTesting.com</h3>
       <p><b>User 1</b></p>
       <div class="center">
-        <video width="640" height="400" controls>
-          <source src="assets/user-1.mp4" type="video/mp4" />
-        </video>
+        <iframe width="640" height="400"
+        src="https://www.youtube.com/embed/xozm5lWMmao">
+        </iframe>
       </div>
       <p><b>User 2</b></p>
       <div class="center">
-        <video width="640" height="400" controls>
-          <source src="assets/user-2.mp4" type="video/mp4" />
-        </video>
+        <iframe width="640" height="400"
+        src="https://www.youtube.com/embed/3wz8lBbua9A">
+        </iframe>
       </div>
       <p><b>User 3</b></p>
       <div class="center">
-        <video width="640" height="400" controls>
-          <source src="assets/user-3.mp4" type="video/mp4" />
-        </video>        
+        <iframe width="640" height="400"
+        src="https://www.youtube.com/embed/faSOo1YGDWQ">
+        </iframe>        
       </div>
       
       <h3>Analysis of Results</h3>
@@ -281,7 +417,5 @@
         </li>
       </ul>
     </div>
-
-    <h3 style="margin-left: 0px"><a href="#title">Back to Top</a></h3>
   </body>
 </html>

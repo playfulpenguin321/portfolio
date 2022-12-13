@@ -1,9 +1,15 @@
+@font-face { font-family: Consolas; src: url('assets/CONSOLA.TTF'); } 
+
 body {
-  background-color: rgb(155, 234, 245);
-  font-family: 'Consolas';
+  background-color: rgb(225, 255, 255);
+  font-family: Consolas;
   padding-top: 4rem;
   padding-left: 6rem;
   padding-right: 6rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 p {
@@ -31,17 +37,15 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* flex-direction: column; */
-  background-color: rgba(128, 163, 240, 0.95); 
-  color: #fff;
+  background-color: rgb(6, 28, 153); 
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
 .navbar-title {
-  font-size: 40px;
-  /* font-family: SecretMansion; */
+  font-size: 35px;
+  color: #fff;
   margin: 1rem;
   padding-left: 3rem;
 }
@@ -61,7 +65,7 @@ h2 {
   color: white;
 } 
 .navbar-links li:hover {
-  background-color: rgb(87, 121, 201);
+  background-color: rgb(25, 72, 181);
   cursor: pointer;
 }
 
