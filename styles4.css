@@ -4,13 +4,15 @@ body {
   background-color: rgb(225, 255, 255);
   font-family: Consolas; 
   padding-top: 4rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 a {
   text-decoration: none;
 }
 
-p,h4,img {
+p,h4 {
   margin-left: 80px;
   margin-right: 80px;
 }
@@ -43,11 +45,10 @@ video, iframe {
   text-align: center;
 }
 
-img {
-  /* display: block; */
-  width: 35%;
-  padding-bottom: 20px;
-}
+/* img { */
+  /* margin: auto; */
+  /* width: 90%; */
+/* }  */
 
 .sketch-row {
   display: flex;

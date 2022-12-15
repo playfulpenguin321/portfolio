@@ -31,12 +31,12 @@
 
     <h2>Description</h2>
     <p>
-      In this project, my task was to select and redesign <b>one</b> page from any website 
-      that showed clear faults in design based on four main criteria of good design: 
-      learnability, memorability, efficiency and accessibility. <br>
-      Once chosen, I was expected to create <b>three</b> low fidelity sketches, 
-      <b>three</b> high fidelity designs and a visual design guide, each a step towards
-      creating an improved version of the original website. Throughout the annotations in my designs,
+      In this project, my task was to develop an interactive interface that <b>1)</b> presents
+      data in an organized format and <b>2)</b> allows users to change how the data is being presented.
+    </p>
+
+    <p>      
+      Throughout the annotations in my designs,
       I address how I was able to solve the problems identified with the page and I provide brief
       notes on how to implement the page on your own.
       The final design was constructed using HTML, CSS, and JavaScript with React. 
@@ -44,138 +44,91 @@
 
     <h2>Contents</h2>
     <ol>
-      <li><a href="#problems">Identifying Problems</a></li>
-      <li><a href="#lofi">Low-fidelity Wireframing</a></li>
-      <li><a href="#guide">Visual Design Style Guide</a></li>
-      <li><a href="#hifi">High-fidelity Prototyping</a></li>
-      <li><a href="#redesign">Redesigned Webpage</a></li>
+      <li><a href="#arch">Designing the Interface</a></li>
+      <li><a href="#react">Implementing React States</a></li>
+      <li><a href="#final">Final Product</a></li>
     </ol>
 
-    <div id="problems">
-      <h2>Part 1: Identifying Problems</h2>
+    <div id="arch">
+      <h2>Part 1: Designing the Interface</h2>
 
-      <h3 style="margin-left: 60px;">Description</h3>
-      <p style="margin-left: 80px;">
-        This website provides information for a Providence-based cafe chain (three locations, 
-        only one is shown), including a menu, details on locations, and the option to contact via a form.
+      <p>
+        The table below is a summary of the requirements I needed for my interface.
       </p>
 
-      <h3 style="margin-left: 60px;">Original website + Screenshot</h3>
-      <h3 align="center"><a href="http://bagelgourmetcafe.com/">http://bagelgourmetcafe.com/</a></h3>
-      <p align="center">
-        <img src="assets/original-site.png" width="70%">
-      </p>
-
-      <h3 style="margin-left: 60px;">Summary of Problems</h3>
+      <h3>Summary of Features</h3>
 
       <table border = "1" align="center" width="80%">
         <tr>
-           <td><b>Criteria</b></td>
-           <td><b>Issues Identified</b></td>
+          <td><b>Requirements</b></td>
+          <td><b>Explanation</b></td>
         </tr>
         <tr>
-           <td>Learnability</td>
-           <td>
-            <ul>
-              <li><u>Inconsistent sizing and layout</u> of images on front page can be disorienting for new users</li>
-              <li>Below the navigation bar, there are instances of bold, underlined text that can be <u>confused for links</u> </li>
-            </ul>
-           </td>
-        </tr>
-        <tr>
-          <td>Memorability</td>
+          <td>Include <u>twelve</u> or more <b>item cards</b>, the visual displays of 
+            data that the user is able to select and sort/filter.</td>
           <td>
-           <ul>
-             <li>Users may be confused with navigation even after frequent visits, given that there are <u>two identical sets</u> of navigation tabs at the top and bottom of the screen 
-            </li>
-           </ul>
+            Each card will display:<br>
+            --- Item image<br>
+            --- Filter categories<br> 
+            --- Sorting categories<br>
+            --- Aggregation property<br>
+            --- Button to add/remove from the aggregator<br>
+            
           </td>
         </tr>
         <tr>
-          <td>Efficiency</td>
+          <td>Have access to <u>two</u> or more <b>filtering</b> categories.</td>
           <td>
-           <ul>
-             <li><u>Small fonts</u> on the navigation bars make it hard to click on links to different pages</li>
-             <li>Information located on the side bar is <u>difficult to read</u>, meaning that some users may repeatedly need to go to “Location” page instead</li>
-             <li>Page is made to fit computer screens but <u>does not resize to fit</u> tablet or phone screens</li>
-           </ul>
+            Examples: <br>
+            --- Price Range <br> 
+            --- Condition (New/Used) <br> 
+            --- Size
           </td>
-       </tr>
-     </table>
-
-     <br>
-
-     <table border = "1" align="center" width="80%">
-      <tr>
-        <td><b>WAIVE Errors</b></td>
-        <td><b>My Opinion</b></td>
-      </tr>
-      <tr>
-        <td>Alternate text is null or empty</td>
-        <td>
-          Agree: <br> ... Images should have an alt text for visually impaired users 
-        </td>
-      </tr>
-      <tr>
-        <td>Empty heading</td>
-        <td>
-          Somewhat Agree: <br> ... This does not affect the web page, but it may indicate a flaw within the HTML file
-        </td>
-      </tr>
-      <tr>
-        <td>Low color contrast</td>
-        <td>
-          Agree: <br> ... Users who are visually impaired may have trouble reading the text clearly
-        </td>
-      </tr>
-      <tr>
-        <td>Missing or uninformative page title</td>
-        <td>
-          Somewhat Agree: <br> ... The text font and color for the store name blends in with the background image
-        </td>
-      </tr>
-     </table>
-    </div>
-    <br>
-
-    <div id="lofi">
-      <h2>Part 2: Low-fidelity Wireframing</h2>
-      <p align="center">
-        <iframe src="assets/lofi_annotations.pdf" width="100%" height="500px"></iframe>
-      </p>
+        </tr>
+        <tr>
+          <td>Have access to <u>one</u> or more <b>sorting</b> categories.</td>
+          <td>
+            Examples: <br>
+            --- By Date (ascending / descending) <br> 
+            --- By Name (A-Z) <br> 
+            --- Size
+          </td>
+        </tr>
+      </table>
     </div>
 
-    <div id="design">
-      <h2>Part 3: Visual Design Style Guide</h2>
-      <p align="center">      
-        <img src="assets/Style Guide.jpg" width="80%">
-      </p>
-    </div>
-
-    <div id="hifi">
-      <h2>Part 4: High-fidelity Prototyping</h2>
-      <h4 style="margin-left: 60px; margin-right: 60px;">
-        Note: When working on this prototype, I initially used the "Just Another Hand" and "Gouldy Old Style" fonts. <br>
-        The final website makes use of the fonts from the Style Guide.
-      </h4>
+    <h3>Choosing a Theme</h3>
+    <p>
+      For my interface, I chose to create a book checklist. I believed a checklist
+      would be a great way to incorporate all of the elements above while providing
+      an easily navigbale interface for any user. <br><br>
       
+      To personalize this project, I chose to display books from the 
+      <a href="https://starwars.fandom.com/wiki/The_Essential_Legends_Collection" target="_blank">
+        <b>Star Wars Essential Legends Collection</b>
+      </a> 
+      an ongoing project of book reprints 
+      from the Star Wars universe.
+    </p>
+
+    <div id="react">
+      <h2>Part 2: Implementing React</h2>
       <p align="center">
-        <iframe src="assets/hifi_annotations.pdf" width="100%" height="500px"></iframe>
+        <img width="50%" src="assets/pengcon.png">
       </p>
     </div>
 
-    <div id="redesign">
-      <h2>Part 5: Redesigned Webpage</h2>
-      <h3 style="margin-left: 60px">Link to website</h3>
+    <div id="final">
+      <h2>Part 3: Final Project</h2>
+      
       <h3 align="center">
-        <a href="https://playfulpenguin321.github.io/bagelgourmetcafe/" target="_blank">
-          https://playfulpenguin321.github.io/bagelgourmetcafe/
+        <a href="https://playfulpenguin321.github.io/development/" target="_blank">
+          https://playfulpenguin321.github.io/development/
         </a>
       </h3>
 
-      <h3 style="margin-left: 60px">Screenshot taken from computer</h3>
       <p align="center">
-        <img src="assets/computer-screenshot.png" width="90%">
+        <img width="90%" src="assets/dev-preview.png">
       </p>
     </div>
 
