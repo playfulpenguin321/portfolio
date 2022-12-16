@@ -36,10 +36,10 @@
     </p>
 
     <p>      
-      Throughout the annotations in my designs,
-      I address how I was able to solve the problems identified with the page and I provide brief
-      notes on how to implement the page on your own.
-      The final design was constructed using HTML, CSS, and JavaScript with React. 
+      To create the finalized interactive website I learned how to use React,
+      a popular JavaScript library that allows for information to be passed between functions
+      as components. More importantly, React provides states in which storage of information 
+      can be changed based on user input.
     </p>
 
     <h2>Contents</h2>
@@ -68,30 +68,38 @@
             data that the user is able to select and sort/filter.</td>
           <td>
             Each card will display:<br>
-            --- Item image<br>
-            --- Filter categories<br> 
-            --- Sorting categories<br>
-            --- Aggregation property<br>
-            --- Button to add/remove from the aggregator<br>
+            <li> Item image<br> </li>
+            <li> Filter categories<br> </li>
+            <li> Sorting categories<br></li>
+            <li> Aggregation property<br></li>
+            <li> Button to add/remove from the aggregator<br></li>
             
-          </td>
-        </tr>
-        <tr>
-          <td>Have access to <u>two</u> or more <b>filtering</b> categories.</td>
-          <td>
-            Examples: <br>
-            --- Price Range <br> 
-            --- Condition (New/Used) <br> 
-            --- Size
           </td>
         </tr>
         <tr>
           <td>Have access to <u>one</u> or more <b>sorting</b> categories.</td>
           <td>
             Examples: <br>
-            --- By Date (ascending / descending) <br> 
-            --- By Name (A-Z) <br> 
-            --- Size
+            <li> By Date (ascending / descending) <br> </li>
+            <li> By Name (A-Z) <br> </li>
+            <li> By Popularity </li>
+          </td>
+        </tr>
+        <tr>
+          <td>Have access to <u>two</u> or more <b>filtering</b> categories.</td>
+          <td>
+            Examples: <br>
+            <li> Price Range <br> </li>
+            <li> Condition (New/Used) <br> </li>
+            <li> Size</li>
+          </td>
+        </tr>
+        <tr>
+          <td>Include an <b>aggregator</b> to which items can be added.</td>
+          <td>
+            Display should include: <br>
+            <li> Items added <br></li>
+            <li> Total sum of some item property </li>
           </td>
         </tr>
       </table>
@@ -111,22 +119,133 @@
       from the Star Wars universe.
     </p>
 
+    <table border = "1" align="center" width="80%">
+      <tr>
+        <td>Item Card Example</td>
+        <td> 
+          <p align="center">
+          <img width="60%" src="assets/itemcard.png">
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>Sorting</td>
+        <td> 
+          <li>By Title (A-Z)</li>
+          <li>By Author</li>
+        </td>
+      </tr>
+      <tr>
+        <td>Filtering</td>
+        <td>
+          <li>Series</li> 
+          <li>Era (based on fictional timeline)</li>
+        </td>
+      </tr>
+      <tr>
+        <td>Aggregator</td>
+        <td>
+          <li>When the user adds a book to the "already read" list, the items displayed
+          on the list will update</li> <br>
+          <li>The <b>total page count</b> of books read will always be displayed on screen</li>
+        </td>
+      </tr>
+    </table>
+
     <div id="react">
       <h2>Part 2: Implementing React</h2>
-      <p align="center">
-        <img width="50%" src="assets/pengcon.png">
+      
+      <p>In my approach for implementing sorting and filtering, I decided to a mutable Set that 
+      contained every applicable filter at the current state. In this matter, each state would
+      only display the books whose cateories corresponded with the active filters. Using React states, 
+      these goals were translated into code. </p>
+     
+      <p>
+        The line below takes in the entire dataset of my books, aptly named bookData, as 
+        the initial state. Using setState, this would be updated accordingly in functions
+        written elsewhere in the code.
+      </p>
+      <pre class="tab">
+                  <b>const [state, setState] = useState({books: bookData});</b> 
+      </pre> 
+      <p>
+        Similarly, the line below declares an empty set representing the current state's set
+        of filters. To update with setFilters, I made use of an input button within each
+        book item card 
+      </p>      
+      <pre class="tab">
+                  <b>const [filters, setFilters] = useState(new Set()); </b>
+      </pre>
+
+      <h3>Files available on GitHub</h3>
+
+      <h3 align="center">
+        <a href="https://github.com/playfulpenguin321/development" target="_blank">
+          https://github.com/playfulpenguin321/development
+        </a>
+      </h3>
+
+      <h3>Organization of Components</h3>
+      <ul>
+        <li>
+          The data (in data.js) that contains all of the information that will be displayed 
+          for each book. This information is used to filter books out into different groups. <br><br>
+        </li> 
+        <li> 
+          BookItem.js comprises my "item component". It is here that the information from data.js 
+          is organized into a readable and comprehensive grid unit. A handler is passed in for each 
+          BookItem such that, when the checkbox is clicked on for a book, the page count aggregator 
+          gets updated and the book is added into the checklist set. <br><br>
+        </li>
+        <li>
+          App.js is where the majority of the logic takes place. Here there are functions that will 
+          display the sidebar of sorting and filtering options as well as the state handlers that update 
+          the display of books based on what the user clicks on. <br>
+        </li>
+      </ul>
+
+      <h3>Passing Data Down</h3>
+      <p>
+        Within App.js, data is passed frequently between functions and handlers to update information
+        instanteneously with each user input. The most notable function is the sortAndFilter function 
+        which takes in several props: a book set (books), a filter set (filters), a checklist set (bRead), 
+        and some booleans (nSort, aSort, checked). Passsing all of this information in at once allows me 
+        to perform a series of calls to .sort and .filter, depending on what is currently 'active', 
+        to then return a new set of books that will replace the current state's book set.
+      </p>
+
+      <h3>How the User Triggers State Changes</h3>
+      <p>
+        All changes in states occur when the user decides to check or uncheck a box. There are four 
+        different assignments of checkboxes present throughout the site: 1) sorting, 2) filtering, 
+        3) displaying checklist items and 4) adding/removing books to the checklist. For each of these actions, 
+        I have written out some const handler that makes use of React states to update information that is 
+        shared between all componentes of the App. <br><br>
+
+        I had to ensure that books that had been checked would remain checked even if a filter 
+        caused the book to disappear from display. This was the foundation for my boolean state 
+        structure in which I use the onChange event of the checkboxes to update booleans representing 
+        what filters/sorts are triggered. This made it easy to then call a sort and filter function 
+        without encountering conflicts of what was and wasn't checked. <br><br>
+
+        One last important state change is the handleReset const that I represent as a button on the screen. 
+        This triggers all the useState declarations I have such that we return to the original state of the site. 
+        This also triggers a forEach loop on all of the 'checked' booleans of the checkboxes to return to false 
+        so nothing is checked once reset.
       </p>
     </div>
 
     <div id="final">
       <h2>Part 3: Final Project</h2>
-      
+
+      <h3>Link to Website</h3>
       <h3 align="center">
         <a href="https://playfulpenguin321.github.io/development/" target="_blank">
           https://playfulpenguin321.github.io/development/
         </a>
       </h3>
 
+      <h3>Website Preview</h3>
       <p align="center">
         <img width="90%" src="assets/dev-preview.png">
       </p>
